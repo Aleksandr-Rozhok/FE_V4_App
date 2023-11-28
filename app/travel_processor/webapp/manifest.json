@@ -139,7 +139,7 @@
                     "options": {
                         "settings": {
                             "entitySet": "Travel",
-                            "enhanceI18n" : "i18n/customTravel.properties",
+                            "enhanceI18n": "i18n/customTravel.properties",
                             "controlConfiguration": {
                                 "@com.sap.vocabularies.UI.v1.SelectionFields": {
                                     "useSemanticDateRange": true
@@ -153,7 +153,8 @@
                                         "route": "TravelObjectPage"
                                     }
                                 }
-                            }
+                            },
+                            "hideFilterBar": true
                         }
                     },
                     "controlAggregation": "beginColumnPages",
