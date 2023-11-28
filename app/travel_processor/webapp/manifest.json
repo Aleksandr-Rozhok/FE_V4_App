@@ -142,7 +142,8 @@
                                         "route": "TravelObjectPage"
                                     }
                                 }
-                            }
+                            },
+                            "hideFilterBar": true
                         }
                     }
                 },
