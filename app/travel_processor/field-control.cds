@@ -26,6 +26,9 @@ annotate TravelService.Travel with @(Common.SideEffects: {
     Core.OperationAvailable : { $edmJson: { $Ne: [{ $Path: 'in/TravelStatus_code'}, 'A']}},
     Common.SideEffects.TargetProperties : ['in/TravelStatus_code'],
   );
+  deductDiscount @(
+    Core.OperationAvailable : { $edmJson: { $Eq: [{ $Path: 'in/TravelStatus_code'}, 'O']}}
+  );
 }
 
 annotate TravelService.Booking with @UI.CreateHidden : to_Travel.TravelStatus.createDeleteHidden;
@@ -63,7 +66,6 @@ annotate TravelService.BookingSupplement {
   to_Supplement @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
   to_Booking    @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
   to_Travel     @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
-
 };
 
 annotate Currency with @Common.UnitSpecificScale : 'Decimals';

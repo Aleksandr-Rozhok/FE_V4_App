@@ -153,8 +153,7 @@
                                         "route": "TravelObjectPage"
                                     }
                                 }
-                            },
-                            "hideFilterBar": true
+                            }
                         }
                     },
                     "controlAggregation": "beginColumnPages",
